@@ -6,5 +6,24 @@ gmx grompp -f preminim.mdp -c raw_newbox.gro -p topol.top -o vac_em.tpr
 
 gmx mdrun -deffnm vac_em
 
+gmx solvate -cp vac_em.gro -cs tip4p.gro -o raw_solv.gro -p topol.top 
 
+gmx grompp -f ions.mdp -c raw_solv.gro -p topol.top -o ions.tpr
 
+gmx genion -s ions.tpr -o raw_solv_ions.gro -p topol.top -pname NA -nname CL -neutral -conc 0.01
+
+gmx grompp -f minim.mdp -c raw_solv_ions.gro -p topol.top -o em.tpr
+
+gmx mdrun -deffnm em
+
+gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr
+
+gmx mdrun -deffnm nvt -v
+
+gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr
+
+gmx mdrun -deffnm npt -v
+
+gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
+
+gmx mdrun -deffnm md_0_1 -v
