@@ -1,0 +1,10 @@
+gmx pdb2gmx -ff oplsaa-mod2023  -ter  -o raw.gro -water tip4 -v -f Mixed-PEO5.pdb 
+
+gmx editconf -f raw.gro -o raw_newbox.gro -c -d 1.0 -bt dodecahedron
+
+gmx grompp -f vac_minim.mdp -c raw_newbox.gro -p topol.top -o vac_em.tpr
+
+gmx mdrun -deffnm vac_em
+
+
+
