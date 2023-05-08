@@ -1,0 +1,658 @@
+; Modifications by Moritz Lennart Obenauer, JGU, April 2023
+[ bondedtypes ]
+     1       1          3          1        1         3      1     0
+
+[ PEO ]
+ [ atoms ]
+     CA     opls_182    0.0700   1
+     HA1    opls_140    0.0700   1
+     HA2    opls_140    0.0700   1
+     CB     opls_182    0.0700   1
+     HB1    opls_140    0.0700   1
+     HB2    opls_140    0.0700   1
+     O      opls_180    -0.420   1
+
+ [ bonds ]
+    CA    CB
+    CA   HA1
+    CA   HA2
+    CB   HB1
+    CB   HB2
+    CB     O
+    -O    CA
+[ dihedrals ] ; override some with residue-specific ones
+
+ [ impropers ]
+
+[ PEX ]
+[ atoms ]  
+     NA     opls_238        -0.500      1
+     HNA    opls_241        0.3000      1
+     C      opls_235        0.7000      1
+     OXT    opls_236        -0.5000     1
+     CB     opls_223B        0.0000     1
+     HB1    opls_140        0.1000      1
+     HB2    opls_140        0.1000      1
+     N      opls_238        -0.500      1
+     H     opls_241        0.3000      1
+     CD     opls_182        0.0000      1
+     CE     opls_182        0.0000      1
+     HD1    opls_140        0.0000      1
+     HD2    opls_140        0.0000      1
+     HE1    opls_140        0.0000      1
+     HE2    opls_140        0.0000      1
+
+
+
+ [ bonds ]
+    C    NA
+    C    CB
+    C    OXT
+    CB   HB1
+    CB   HB2
+    CB   N
+    NA   HNA
+    NA   CD
+    CD   CE
+    CD   HD1
+    CD   HD2
+    CE   HE1
+    CE   HE2   
+    N    H
+    -O    CE
+[ dihedrals ] ; override some with residue-specific ones
+     NA    CD    CE    -O    dih_HIS_chi1_N_C_C_C
+ [ impropers ]
+
+[ LNK ]
+ [ atoms ]  
+     NA     opls_238        -0.500      1
+     HNA    opls_241        0.3000      1
+     C      opls_235        0.7000      1
+     OXT    opls_236        -0.5000     1
+     CB     opls_223B        0.0000     1
+     HB1    opls_140        0.1000      1
+     HB2    opls_140        0.1000      1
+     NB     opls_238        -0.500      1
+     HNB    opls_241        0.3000      1
+     CD     opls_182        0.0700      1
+     CE     opls_182        0.0700      1
+     HD1    opls_140        0.0700      1
+     HD2    opls_140        0.0700      1
+     HE1    opls_140        0.0700      1
+     HE2    opls_140        0.0700      1
+     O      opls_180        -0.420      1
+
+
+ [ bonds ]
+    C    NA
+    C    CB
+    C    OXT
+    CB   HB1
+    CB   HB2
+    CB   NB
+    NA   HNA
+    NA   CD
+    CD   CE
+    CD   HD1
+    CD   HD2
+    CE   HE1
+    CE   HE2
+    CE   O   
+    NB   HNB
+    -C   NB
+
+
+[ dihedrals ] ; override some with residue-specific ones
+     NA    CD    CE    -O    dih_HIS_chi1_N_C_C_C
+     NA    CD    CE    O    dih_HIS_chi1_N_C_C_C
+
+
+
+
+ [ impropers ]
+
+[ CSP ]
+ [ atoms ]
+O   opls_236    -0.5    1
+C   opls_235    0.5     1
+CB  opls_135    -0.1800 1
+CC  opls_135    -0.1800 1
+CD  opls_135    -0.1800 1
+CE  opls_135    -0.1800 1
+CF  opls_135    0.0200  1
+N   opls_238    -0.5    1
+H   opls_241    0.3     1
+HF1 opls_140    0.0900  1
+HF2 opls_140    0.0900  1
+HE1 opls_140    0.0900  1
+HE2 opls_140    0.0900  1
+HD1 opls_140    0.0900  1
+HD2 opls_140    0.0900  1
+HC1 opls_140    0.0900  1
+HC2 opls_140    0.0900  1
+HB1 opls_140    0.0900  1
+HB2 opls_140    0.0900  1
+
+
+ [ bonds ]
+    C     CB
+    C      O
+    CB   HB1
+    CB   HB2
+    CB   CC
+    CC   HC1
+    CC   HC2
+    CC   CD
+    CD   HD1
+    CD   HD2
+    CD   CE
+    CE   HE1
+    CE   HE2
+    CE   CF
+    CF   HF1
+    CF   HF2
+    CF   N
+    N    H
+   -C   N
+    
+
+
+ [ impropers ]
+
+ [ PHX ]
+ [ atoms ]
+     N    opls_238   -0.500     1
+     H    opls_241    0.300     1
+    CA    opls_224B   0.140     1
+    HA    opls_140    0.060     1
+    CB    opls_149   -0.005     2
+   HB1    opls_140    0.060     2
+   HB2    opls_140    0.060     2
+    CG    opls_145   -0.115     2
+   CD1    opls_145   -0.115     3
+   HD1    opls_146    0.115     3
+   CD2    opls_145   -0.115     4
+   HD2    opls_146    0.115     4
+   CE1    opls_145   -0.115     5
+   HE1    opls_146    0.115     5
+   CE2    opls_145   -0.115     6
+   HE2    opls_146    0.115     6 
+    CZ    opls_145   -0.115     7 
+    HZ    opls_146    0.115     7
+     C    opls_235    0.500     8
+     O    opls_236   -0.500     8
+ [ bonds ]
+     N     H
+     N    CA
+    CA    HA
+    CA    CB
+    CA     C
+    CB   HB1
+    CB   HB2
+    CB    CG
+    CG   CD1
+    CG   CD2
+   CD1   HD1
+   CD1   CE1
+   CD2   HD2
+   CD2   CE2
+   CE1   HE1
+   CE1    CZ
+   CE2   HE2
+   CE2    CZ
+    CZ    HZ
+     C     O
+    +C     N
+ [ impropers ] 
+    CG   CE2   CD2   HD2    improper_Z_CA_X_Y 
+   CD2    CZ   CE2   HE2    improper_Z_CA_X_Y 
+   CE1   CE2    CZ    HZ    improper_Z_CA_X_Y 
+   CD1    CZ   CE1   HE1    improper_Z_CA_X_Y 
+    CG   CE1   CD1   HD1    improper_Z_CA_X_Y 
+   CD1   CD2    CG    CB    improper_Z_CA_X_Y
+
+
+[ HISX ] 
+ [ atoms ]
+     N    opls_238   -0.500     1
+     H    opls_241    0.300     1
+    CA    opls_224B   0.140     1
+    HA    opls_140    0.060     1
+    CB    opls_505   -0.005     2 
+   HB1    opls_140    0.060     2 
+   HB2    opls_140    0.060     2 
+    CG    opls_508    0.015     3
+   ND1    opls_503   -0.570     4
+   HD1    opls_504    0.420     4
+   CD2    opls_507   -0.015     5
+   HD2    opls_146    0.115     5
+   CE1    opls_506    0.295     6
+   HE1    opls_146    0.115     6
+   NE2    opls_511   -0.490     7
+     C    opls_235    0.500     8
+     O    opls_236   -0.500     8
+ [ bonds ]
+     N     H
+     N    CA
+    CA    HA
+    CA    CB
+    CA     C
+    CB   HB1
+    CB   HB2
+    CB    CG
+    CG   ND1
+    CG   CD2
+   ND1   HD1
+   ND1   CE1
+   CD2   HD2
+   CD2   NE2
+   CE1   HE1
+   CE1   NE2
+     C     O
+    +C     N
+ [ dihedrals ] ; override some with residue-specific ones
+     N    CA    CB    CG    dih_HIS_chi1_N_C_C_C
+    CG    CB    CA     C    dih_HIS_chi1_C_C_C_CO
+    CA    CB    CG   ND1    dih_HIS_chi2_C_C_C_N
+ [ impropers ]
+   ND1   CD2    CG    CB    improper_Z_CA_X_Y
+    CG   CE1   ND1   HD1    improper_Z_N_X_Y
+    CG   NE2   CD2   HD2    improper_Z_CA_X_Y
+   ND1   NE2   CE1   HE1    improper_Z_CA_X_Y
+
+   [ CSX ]
+ [ atoms ]
+O   opls_236    -0.5    1
+C   opls_235    0.5     1
+CB  opls_135    -0.1800 1
+CC  opls_135    -0.1800 1
+CD  opls_135    -0.1800 1
+CE  opls_135    -0.1800 1
+CF  opls_135    0.0200  1
+N   opls_238    -0.5    1
+H   opls_241    0.3     1
+HF1 opls_140    0.0900  1
+HF2 opls_140    0.0900  1
+HE1 opls_140    0.0900  1
+HE2 opls_140    0.0900  1
+HD1 opls_140    0.0900  1
+HD2 opls_140    0.0900  1
+HC1 opls_140    0.0900  1
+HC2 opls_140    0.0900  1
+HB1 opls_140    0.0900  1
+HB2 opls_140    0.0900  1
+
+
+ [ bonds ]
+    C     CB
+    C      O
+    CB   HB1
+    CB   HB2
+    CB   CC
+    CC   HC1
+    CC   HC2
+    CC   CD
+    CD   HD1
+    CD   HD2
+    CD   CE
+    CE   HE1
+    CE   HE2
+    CE   CF
+    CF   HF1
+    CF   HF2
+    CF   N
+    N    H
+   +C    N
+   -N    C
+
+
+
+; Coarse Grained United Atoms Models
+
+[ PEY ]
+ [ atoms ]
+     CA     opls_110   0.1915    1
+     CB     opls_110   0.1915    1
+     O      opls_108   -0.383    1
+
+ [ bonds ]
+    CA    CB       bnd_PEY_C_C
+    CB     O       bnd_PEY_C_O
+    -O    CA       bnd_PEY_C_O
+ [angles]
+  CA     CB     O      ang_PEY_C_C_O
+  CB     O     +CA     ang_PEY_C_C_O
+ CB     O     +CE      ang_PEY_C_C_O
+  -O     CA    CB      ang_PEY_C_C_O
+  -CE     -O    CA     ang_PEY_C_C_O
+ [dihedrals]
+ CA      CB     O     +CA         dih_PEY_C_O_C_C
+ -HE2      -CE     -O     CA      dih_PEY_C_O_C_C 
+-CD    -CE    -O    CA            dih_PEY_C_O_C_C
+-HE1   -CE    -O    CA            dih_PEY_C_O_C_C
+-CE   -O    CA    CB              dih_PEY_C_O_C_C
+-O   CA    CB    O                dih_PEY_C_O_C_C
+CB O +CA +CB                      dih_PEY_C_O_C_C
+CA CB O +CE                       dih_PEY_C_O_C_C
+CB O +CE +CD                      dih_PEY_C_O_C_C
+CB O +CE +HE1                     dih_PEY_C_O_C_C
+CB O +CE +HE2                     dih_PEY_C_O_C_C
+    
+
+ [ impropers ]
+
+ [ ACY ]
+
+ [ atoms ]
+   CH3    opls_063    -0.000     1
+     C    opls_001      0.500     2
+     O    opls_002     -0.500     2
+ [ bonds ]
+   CH3     C
+     C     O
+[ impropers ]
+  CH3    +N    C      O     improper_O_C_X_Y 
+
+[ PHY ]
+ [ atoms ]
+     N    opls_003    -0.500     1
+     H    opls_004     0.300     1
+    CA    opls_006     0.2       1
+    CB    opls_009    -0.00      2
+    CG    opls_011   -0.0       2
+   CD1    opls_011   -0.0       3
+   CD2    opls_011   -0.0       4
+   CE1    opls_011   -0.0       5
+   CE2    opls_011   -0.0       6
+    CZ    opls_011   -0.0       7 
+     C    opls_001     0.500     8
+     O    opls_002    -0.500     8
+ [ bonds ]
+     N     H
+     N    CA
+    CA    CB
+    CA     C
+    CB    CG
+    CG   CD1
+    CG   CD2
+   CD1   CE1
+   CD2   CE2
+   CE1    CZ
+   CE2    CZ
+     C     O
+    -C     N
+ [ impropers ]
+
+ [ HISY ] 
+ [ atoms ]
+     N    opls_003     -0.500     1
+     H    opls_004      0.300     1
+    CA    opls_006     0.140     1
+    CB    opls_009     -0.005     2 
+    CG    opls_045    0.015     3
+   ND1    opls_040   -0.570     4
+   HD1    opls_041    0.420     4
+   CD2    opls_044   -0.015     5
+   CE1    opls_045    0.295     6
+   NE2    opls_042   -0.490     7
+     C    opls_001    0.500     8
+     O    opls_002   -0.500     8
+ [ bonds ]
+     N     H
+     N    CA
+    CA    CB
+    CA     C
+    CB    CG
+    CG   ND1
+    CG   CD2
+   ND1   HD1
+   ND1   CE1
+   CD2   NE2
+   CE1   NE2
+     C     O
+    -C     N
+ [ dihedrals ] ; override some with residue-specific ones
+     N    CA    CB    CG    dih_HIS_chi1_N_C_C_C
+    CG    CB    CA     C    dih_HIS_chi1_C_C_C_CO
+    CA    CB    CG   ND1    dih_HIS_chi2_C_C_C_N
+ [ impropers ]
+
+
+[ CSY ]
+ [ atoms ]
+O   opls_002    -0.4451 1
+C   opls_001    0.6185  1
+CB  opls_071    0.00000 1
+CC  opls_071    0.00000 1
+CD  opls_071    0.00000 1
+CE  opls_071    -0.0045 1
+CF  opls_005    0.4491  1
+N   opls_003    -1.1334  1
+H   opls_004    0.5154  1
+
+
+
+ [ bonds ]
+    C     CB bnd_PEY_C_C
+    C      O bnd_PEY_C_O
+    CB   CC  bnd_PEY_C_C
+    CC   CD  bnd_PEY_C_C
+    CD   CE  bnd_PEY_C_C
+    CE   CF  bnd_PEY_C_C
+    CF   N   bnd_PEY_C_N
+    N    H
+   -C   N   bnd_PEY_C_N
+
+ [ angles ]
+
+ O C CB    ang_PEY_C_C_O
+ CB C +NB  ang_PEY_C_C_N
+ C CB CC   ang_PEY_C_C_C
+ CB CC CD  ang_PEY_C_C_C
+ CC CD CE  ang_PEY_C_C_C
+ CD CE CF  ang_PEY_C_C_C
+ CE CF N   ang_PEY_C_C_N
+ -C N CF   ang_PEY_C_C_N
+ CF N H    ang_PEY_C_C_N
+    
+ [ dihedrals ]
+
+ -CA -C N CF    dih_PEY_C_C_C_N
+ -O  -C N CF    dih_PEY_C_C_N_O
+ O C CB CC      dih_PEY_C_O_C_C
+ +NB C CB CC    dih_PEY_C_C_C_N
+ O C +NB +CB    dih_PEY_C_C_N_O
+ CB C +NB +HNB  dih_PEY_C_C_C_N
+ C CB CC CD     dih_PEY_C_C_C_C
+ CB CC CD CE    dih_PEY_C_C_C_C
+ CC CD CE CF    dih_PEY_C_C_C_C
+ CD CE CF N     dih_PEY_C_C_C_N
+ CE CF N -C     dih_PEY_C_C_C_N
+ CE CF N -H     dih_PEY_C_C_C_N
+ CB C +NB +CB   dih_PEY_C_C_C_N
+ CE CF N H      dih_PEY_C_C_C_N
+
+ [ CXY ]
+ [ atoms ]
+O   opls_002    -0.4451 1
+C   opls_001    0.6185  1
+CB  opls_071    0.00000 1
+CC  opls_071    0.00000 1
+CD  opls_071    0.00000 1
+CE  opls_071    -0.0045 1
+CF  opls_005    0.4491  1
+N   opls_003    -1.1334  1
+H   opls_004    0.5154  1
+
+
+
+ [ bonds ]
+    C     CB bnd_PEY_C_C
+    C      O bnd_PEY_C_O
+    CB   CC  bnd_PEY_C_C
+    CC   CD  bnd_PEY_C_C
+    CD   CE  bnd_PEY_C_C
+    CE   CF  bnd_PEY_C_C
+    CF   N   bnd_PEY_C_N
+    N    H
+   -NA    C   bnd_PEY_C_N
+   +C    N   bnd_PEY_C_N
+
+
+ [ angles ]
+
+ O C CB    ang_PEY_C_C_O
+ CB C +NB  ang_PEY_C_C_N
+ C CB CC   ang_PEY_C_C_C
+ CB CC CD  ang_PEY_C_C_C
+ CC CD CE  ang_PEY_C_C_C
+ CD CE CF  ang_PEY_C_C_C
+ CE CF N   ang_PEY_C_C_N
+ -C N CF   ang_PEY_C_C_N
+ CF N H    ang_PEY_C_C_N
+ CF N +C   ang_PEY_C_C_N
+    
+ [ dihedrals ]
+
+ -CA -C N CF    dih_PEY_C_C_C_N
+ -O  -C N CF    dih_PEY_C_C_N_O
+ O C CB CC      dih_PEY_C_O_C_C
+ +NB C CB CC    dih_PEY_C_C_C_N
+ O C +NB +CB    dih_PEY_C_C_N_O
+ CB C +NB +HNB  dih_PEY_C_C_C_N
+ C CB CC CD     dih_PEY_C_C_C_C
+ CB CC CD CE    dih_PEY_C_C_C_C
+ CC CD CE CF    dih_PEY_C_C_C_C
+ CD CE CF N     dih_PEY_C_C_C_N
+ CE CF N -C     dih_PEY_C_C_C_N
+ CE CF N -H     dih_PEY_C_C_C_N
+ CB C +NB +CB   dih_PEY_C_C_C_N
+ CE CF N H      dih_PEY_C_C_C_N
+ CE CF N +C     dih_PEY_C_C_C_N
+ CF N +C +CA    dih_PEY_C_C_C_N
+ CF N +C +O     dih_PEY_C_C_N_OXT
+
+[ LNY ]
+ [ atoms ]  
+     NA     opls_003    -0.5         1
+     HNA    opls_004     0.3         1
+     C      opls_005     0.356       1
+     OXT    opls_001    -0.44        1
+     CB     opls_002     0.593       1
+     NB     opls_003    -1.115       1
+     HNB    opls_004     0.542       1
+     CD     opls_005     0.382       1
+     CE     opls_110     0.382       1
+     O      opls_108    -0.5         1
+
+
+ [ bonds ]
+    C    NA  bnd_PEY_C_N
+    C    CB  bnd_PEY_C_C
+    C    OXT bnd_PEY_C_OXT
+    CB   NB  bnd_PEY_C_N
+    NA   HNA
+    NA   CD  bnd_PEY_C_N
+    CD   CE  bnd_PEY_C_C
+    CE   O   bnd_PEY_C_O
+    NB   HNB
+    -C   NB  bnd_PEY_C_N
+
+ [ angles ]
+
+ HNA NA C   ang_PEY_C_C_N
+ HNA NA CD  ang_PEY_C_C_N
+ C NA CD    ang_PEY_C_C_N
+ NA C OXT   ang_PEY_C_C_OXT
+ NA C CB    ang_PEY_C_C_N
+ OXT C CB   ang_PEY_C_C_OXT
+ C CB NB    ang_PEY_C_C_N
+ -C NB CB   ang_PEY_C_C_N
+ CB NB HNB  ang_PEY_C_C_N
+ NA CD CE   ang_PEY_C_C_N
+ CD CE O    ang_PEY_C_C_O
+
+[ dihedrals ]
+
+HNA NA C OXT  dih_PEY_C_C_N_OXT
+HNA NA C CB   dih_PEY_C_C_C_N
+CD NA C OXT   dih_PEY_C_C_N_OXT
+CD NA C CB    dih_PEY_C_C_C_N
+HNA NA CD CE  dih_PEY_C_C_C_N
+C NA CD CE    dih_PEY_C_C_C_N
+NA C CB NB    dih_PEY_C_C_C_N
+OXT C CB NB   dih_PEY_C_C_N_OXT
+C CB NB -C    dih_PEY_C_C_C_N
+C CB NB HNB   dih_PEY_C_C_C_N
+NA CD CE O    dih_PEY_C_C_N_O
+
+[ PXY ]
+ [ atoms ]  
+     NA     opls_003    -0.5         1
+     HNA    opls_004     0.3         1
+     C      opls_005     0.356       1
+     OXT    opls_001    -0.44        1
+     CB     opls_002     0.593       1
+     NB     opls_003    -1.115       1
+     HNB    opls_004     0.042       1
+     CD     opls_005     0.382       1
+     CE     opls_110     0.382       1
+
+
+
+ [ bonds ]
+    C    NA  bnd_PEY_C_N
+    C    CB  bnd_PEY_C_C
+    C    OXT bnd_PEY_C_OXT
+    CB   NB  bnd_PEY_C_N
+    NA   HNA
+    NA   CD  bnd_PEY_C_N
+    CD   CE  bnd_PEY_C_C
+    NB   HNB
+    -O   CE  bnd_PEY_C_O
+
+ [ angles ]
+
+ HNA NA C   ang_PEY_C_C_N
+ HNA NA CD  ang_PEY_C_C_N
+ C NA CD    ang_PEY_C_C_N
+ NA C OXT   ang_PEY_C_C_OXT
+ NA C CB    ang_PEY_C_C_N
+ OXT C CB   ang_PEY_C_C_OXT
+ C CB NB    ang_PEY_C_C_N
+ -C NB CB   ang_PEY_C_C_N
+ CB NB HNB  ang_PEY_C_C_N
+ NA CD CE   ang_PEY_C_C_N
+ CD CE O    ang_PEY_C_C_O
+ C NA +C    ang_PEY_C_C_N
+ CD NA +C   ang_PEY_C_C_N
+ -O CE CD   ang_PEY_C_C_O
+ NA +C +CB  ang_PEY_C_C_N
+
+
+[ dihedrals ]
+
+HNA NA C OXT  dih_PEY_C_C_N_OXT
+HNA NA C CB   dih_PEY_C_C_C_N
+CD NA C OXT   dih_PEY_C_C_N_OXT
+CD NA C CB    dih_PEY_C_C_C_N
+HNA NA CD CE  dih_PEY_C_C_C_N
+C NA CD CE    dih_PEY_C_C_C_N
+NA C CB NB    dih_PEY_C_C_C_N
+OXT C CB NB   dih_PEY_C_C_N_OXT
+C CB NB -C    dih_PEY_C_C_C_N
+C CB NB HNB   dih_PEY_C_C_C_N
+NA CD CE O    dih_PEY_C_C_N_O
++C NA C OXT   dih_PEY_C_C_N_OXT
++C NA C CB    dih_PEY_C_C_C_N
++C NA CD CE   dih_PEY_C_C_C_N
+HNA NA +C +CB dih_PEY_C_C_C_N
+C NA +C +O    dih_PEY_C_C_N_O
+C NA +C +CB   dih_PEY_C_C_C_N
+CD NA +C +O   dih_PEY_C_C_N_O
+CD NA +C +CB  dih_PEY_C_C_C_N
+NA CD CE -O   dih_PEY_C_C_N_O
+NA +C +CB +CC dih_PEY_C_C_C_N
+
+
